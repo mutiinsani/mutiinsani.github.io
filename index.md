@@ -1,19 +1,17 @@
 ## Portfolio
 
----
+### Python Projects
 
-### Machine Learning Projects
-
-[Liveness Detection](/sample_page)
-
----
-[Face Matching](/sample_page)
-
----
-[Tampered Image Detection](http://example.com/)
+[Tampered Image Detection](/tampered_detection)
 
 --- 
-[Fraud Detection on Credit Card Detection](http://example.com/)
+[Liveness Detection](/liveness_detection)
+
+---
+[Face Matching](/face_matching)
+
+---
+[Fraud Detection on Credit Card Detection](/fraud_detection)
 
 ---
 
@@ -32,8 +30,8 @@
 ---
 ### Visualization Samples
 
-- Sample #1
-- Sample #2 
+- [Tableau Dashboard](https://public.tableau.com/shared/6C967CFG6?:display_count=n&:origin=viz_share_link) 
+- [Python Visualization](http://example.com/)
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
