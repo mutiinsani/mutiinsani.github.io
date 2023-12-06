@@ -2,9 +2,9 @@
 
 **Project description:** 
 
-### 1. Process 
+### Process 
 
-### 2. Details and code samples 
+### Details and code samples 
 
 ### Demo
 

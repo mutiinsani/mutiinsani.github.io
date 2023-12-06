@@ -8,30 +8,21 @@ Liveness we attempt to detect:
 - Looking to the left side
 - Looking to the right side
 
-### 1. Input
-- A short video, OR
-- Set of images
-```python
-if (isAwesome){
-  return true
-}
-```
+### Process
+General process in developing liveness detection:
+1. Dataset overview
+2. Input preparation. Input can be in form of:
+  - A short video, OR
+  - Set of images
+3. Detection of liveness:
+  - Detect face / head from images
+  - Identify if the object of interest (person) show liveness
+4. API preparation
+  
+### Details and code samples 
+TBA
 
-### 2. Process
-- Detect face / head from images
-- Identify if the object of interest (person) show liveness
-- Calculate the probability of each acation
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 3. Output
-- API response in json 
-
-### 4. Demo
+### Demo
 
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
