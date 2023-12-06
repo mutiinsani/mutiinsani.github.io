@@ -2,33 +2,42 @@
 
 ---
 
-### Category Name 1 
+### Machine Learning Projects
 
-[Project 1 Title](/sample_page)
+[Liveness Detection](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Face Matching](/sample_page)
+[comment]: Comment text <img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
+[Tampered Image Detection](http://example.com/)
+[comment]: Comment text <img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+--- 
+[Fraud Detection on Credit Card Detection](http://example.com/)
+[comment]: Comment text <img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
+
+### Data Gathering, Cleaning and Exploration
+
+- [Temperature, Humidity, and Dewpoint Analysis](http://example.com/)
+- [Product Data Scrapping and Cleaning](http://example.com/)
+- [Google News Scrapping](http://example.com/)
+
+---
+
+### Research Project
+
+[Spoofing Detection](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+### Visualization Samples
 
----
-
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
-
----
-
-
-
+- Sample #1
+- Sample #2 
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
