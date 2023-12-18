@@ -4,14 +4,22 @@
 
 [Tampered Image Detection](/tampered_detection)
 
+Tampered detection is a way to verify originality of a picture. This project focus on splicing method.
+
 --- 
 [Liveness Detection](/liveness_detection)
+
+An API to detect liveness from a short videos / set of images.
 
 ---
 [Face Matching](/face_matching)
 
+An API to compare face in two pictures and return the percentage of similarity of both faces.
+
 ---
 [Fraud Detection on Credit Card Detection](/fraud_detection)
+
+A model to predict whether a transaction is fraudulent or not.
 
 ---
 
