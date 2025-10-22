@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LinkedIn Studentwerk Data | Muti S Portfolio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>LinkedIn Studentwerk Data</h1>
+    <p>Automated pipeline + dashboard for working-student jobs in data & AI</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back">← Back to Portfolio</a>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This project collects LinkedIn job listings for working-student roles in data-related fields (Data Analyst,
+        Data Scientist, AI/ML Engineer) in Germany, processes the data, and presents interactive visualizations in a Flask web app.
+        It automates the end-to-end workflow: extraction → transformation → visualization → deployment.
+      </p>
+    </section>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Data Extraction</strong> — Scrapes job listings from a public website and saves raw CSVs in <code>outputs/</code>.</li>
+        <li><strong>Data Transformation</strong> — Cleans and transforms raw CSVs, then writes processed files to <code>processed/</code>.</li>
+        <li><strong>Data Visualization</strong> — Serves processed results through a Flask app. Using simple <code>templates/</code> and <code>static/</code>.</li>
+        <li><strong>Automation & CI</strong> — A GitHub Action triggers the pipeline (run <code>main.py</code> then <code>etl-process.py</code> on success).</li>
+        <li><strong>Deployment</strong> — The Flask app is deployed on Render and rebuilds automatically on new commits.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Structure</h2>
+      <p>Key files and folders:</p>
+      <ul>
+        <li><code>main.py</code> — scraper that extracts listings and writes raw CSVs to <code>outputs/</code>.</li>
+        <li><code>etl-process.py</code> — ETL script that reads raw CSVs, cleans & transforms, and outputs to <code>processed/</code>.</li>
+        <li><code>app.py</code> — Flask application that renders the job board page using templates and static assets.</li>
+        <li><code>templates/</code>, <code>static/</code> — frontend resources for the Flask app.</li>
+        <li><code>outputs/</code>, <code>processed/</code> — storage for raw and processed CSVs respectively.</li>
+        <li><code>flask-requirements.txt</code> — Python dependencies for deployment.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+
+      <h3>1. Data extraction</h3>
+      <p>
+        The scraper (<code>main.py</code>) visits a public job listing page, gest jobs in the past 24 hour, parses job info, and writes raw CSV files to
+        <code>outputs/</code>. Each run collects new listings and appends or stores timestamped CSVs for traceability.
+      </p>
+
+      <h3>2. Data transformation</h3>
+      <p>
+        <code>etl-process.py</code> reads raw CSVs, handles missing values, normalizes fields (titles, locations, company names),
+        and creates derived features (e.g., role_category, role_category_order). The cleaned dataset is saved into <code>processed/</code>.
+      </p>
+
+      <h3>3. Data visualization</h3>
+      <p>
+        The Flask app (<code>app.py</code>) loads processed CSVs and exposes:
+      </p>
+      <ul>
+        <li>Summary metrics (counts by role_category, top employers)</li>
+        <li>Interactive charts (time-series of new listings, maps by location)</li>
+        <li>Table views with filters and links to original postings</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Automation (GitHub Actions)</h2>
+      <p>
+        A GitHub Action workflow runs <code>main.py</code> once a day. If the scraper succeeds, it triggers <code>etl-process.py</code>.
+        This ensures the processed dataset is always rebuilt after successful scrapes.
+      </p>
+    </section>
+
+    <section>
+      <h2>Deployment (Render)</h2>
+      <p>The Flask app is deployed on Render. The service is connected to the GitHub repository and configured to rebuild automatically on commits to selected paths.</p>
+
+      <table style="width:100%; border-collapse: collapse; margin-top: 12px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:8px; border-bottom:1px solid #e6eef6;">Setting</th>
+            <th style="text-align:left; padding:8px; border-bottom:1px solid #e6eef6;">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid #f1f5f9;">Environment</td>
+            <td style="padding:8px; border-bottom:1px solid #f1f5f9;"><code>Python 3</code></td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid #f1f5f9;">Build Command</td>
+            <td style="padding:8px; border-bottom:1px solid #f1f5f9;"><code>pip install -r flask-requirements.txt</code></td>
+          </tr>
+          <tr>
+            <td style="padding:8px;">Start Command</td>
+            <td style="padding:8px;"><code>gunicorn app:app</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:12px;">
+        <strong>Live app:</strong>
+        <a href="https://linkedin-studentwerk-data.onrender.com/" target="_blank" rel="noopener">linkedin-studentwerk-data.onrender.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Further improvement</h2>
+      <ul>
+        <li>Analyze job description with NLP or LLMs.</li>
+        <li>Show list of jobs in the past week.</li>
+        <li>Add a page to show monthly job analysis.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Muti S — <a href="../index.html">Back to Home</a>
+  </footer>
+</body>
+</html>
