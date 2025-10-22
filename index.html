@@ -1,52 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muti S | Data Scientist Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #333; }
-    header { background: #0e76a8; color: white; padding: 20px; text-align: center; }
-    main { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 10px; }
-    h1, h2 { color: #0e76a8; }
-    ul { line-height: 1.8; }
-    a { color: #0e76a8; text-decoration: none; }
-    footer { text-align: center; padding: 10px; color: #555; font-size: 0.9em; }
+    :root {
+      --primary: #00020b;
+      --accent: #003879;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      padding: 25px 30px;
+      margin-bottom: 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    li::before {
+      content: "• ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    .projects li {
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.1em;
+      color: #f0f9ff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Muti S</h1>
-    <p>Data Scientist | Machine Learning | Python</p>
+    <p class="tagline">Data Scientist | Machine Learning | Python</p>
   </header>
+
   <main>
     <section>
       <h2>About Me</h2>
-      <p>Hi! I'm Muti, a data science enthusiast passionate about turning data into insights and intelligent solutions.</p>
+      <p>Hi! I'm Muti, a data scientist passionate about turning complex data into actionable insights and impactful models. I enjoy exploring new data sources, visualizing patterns, and applying machine learning to solve real problems.</p>
     </section>
+
     <section>
       <h2>Skills</h2>
       <ul>
-        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-        <li>Data Visualization (Matplotlib, Seaborn, Tableau)</li>
-        <li>Machine Learning</li>
-        <li>SQL & Data Cleaning</li>
-        <li>Cloud Technologies</li>
+        <li>Python (Pandas, NumPy, Scikit-learn, Streamlit)</li>
+        <li>Machine Learning & Predictive Modeling</li>
+        <li>Data Visualization (Matplotlib, Seaborn, Plotly, Tableau)</li>
+        <li>SQL, Data Cleaning & Feature Engineering</li>
+        <li>Version Control (Git, GitHub)</li>
       </ul>
     </section>
-    <section>
+
+    <section class="projects">
       <h2>Projects</h2>
       <ul>
         <li><strong>Personalized Job Board</strong> Job Board for working student jobs in Data Analytics in Germany. [<a href="https://linkedin-studentwerk-data.onrender.com/">Website</a>]</li>
       </ul>
     </section>
+
     <section>
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:mutiinsani.s@gmail.com">mutiinsani.s@gmail.com</a> | 🌐 <a href="https://linkedin.com/in/muti-siahaan">LinkedIn</a></p>
+      <p>📧 <a href="mailto:mutiinsani.s@gmail.com">mutiinsani.s@gmail.com</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/muti-siahaan">LinkedIn</a> | <a href="https://github.com/mutiinsani">GitHub</a></p>
     </section>
   </main>
+
   <footer>
-    © 2025 Muti S
+    © 2025 Muti S — Built with 💙 using GitHub Pages
   </footer>
 </body>
 </html>
